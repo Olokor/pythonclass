@@ -1,7 +1,13 @@
-import ene
+# from googletrans import Translator
+# import googletrans
 
-pen = ene.Draw(100, 1)
+# language = googletrans.LANGUAGES
+# # print(language)
+# display = list(language.values())
+# print(display)
 
-pen.circle()
-pen.square()
+# from time import strftime
 
+# print(strftime("%H:%M:%S:%p"))
+
+print(10%3)
