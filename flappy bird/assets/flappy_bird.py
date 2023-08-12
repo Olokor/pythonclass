@@ -66,8 +66,6 @@ pg.time.set_timer(SPAWNPIPES, 1200)
 
 
 
-
-
 while True:
     for event in pg.event.get():
         if event.type == pg.QUIT:
