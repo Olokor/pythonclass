@@ -15,7 +15,7 @@ def correct_spelling():
 
     word = entry.get()
     correcter = TextBlob(word).correct()
-    # result = correcter.correct()
+    # result = correcter.correct()sc
     tk.Label(master=window, text="The Correct Spelling Is: ", font=("popins 20"), bg="#dae6f6", fg="#364971").place(x=40, y=250)
     spell.config(text=correcter)
 
