@@ -1,7 +1,8 @@
 from tkinter import *
+import math
 
 window = Tk()
-window.geometry("375x420")
+window.geometry("439x420")
 window.title("Calculator")
 window.resizable(False, False)
 
@@ -25,6 +26,20 @@ def solve():
     result = eval(entry_value)
     entry_output.set(result)
 
+area = 0
+
+def mode():
+    i = "enter radius?: "
+    entry_output.set(i)
+    radius = entry.get()[15:]
+    area = math.pi * float(radius)**2
+
+
+    
+
+
+
+
 
 Button(master=window, width=11, height=4, text='(', relief='flat', bg='white', command=lambda: show("(")).place(x=0 , y=50)
 Button(master=window, width=11, height=4, text=')', relief='flat', bg='white', command=lambda: show(")")).place(x=90 , y=50)
@@ -46,6 +61,8 @@ Button(master=window, width=11, height=4, text='x', relief='flat', bg='white', c
 Button(master=window, width=11, height=4, text='.', relief='flat', bg='white', command=lambda: show(".")).place(x=90 , y=350)
 Button(master=window, width=11, height=4, text='=', relief='flat', bg='lightblue', command=solve).place(x=270 , y=350)
 Button(master=window, width=11, height=4, text='C', relief='flat', bg='white', command=clear).place(x=0 , y=350)
+Button(master=window, width=11, height=4, text='circle area', relief='flat', bg='white', command=lambda:mode()).place(x=350 , y=50)
+
 
 
 window.mainloop()

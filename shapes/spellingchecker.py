@@ -1,19 +1,19 @@
-import tkinter as tk
-from textblob import TextBlob
+import tkinter as tk # this is the window builder!
+from textblob import TextBlob # this is the function that corrects our spellings
 
 
-window = tk.Tk()
-window.title("spelling checker")
-window.geometry("700x400")
-window.config(bg="#dae6f6")
-window.resizable(False, False)
+window = tk.Tk() # creating window
+window.title("spelling checker") # givig the window a title
+window.geometry("700x400") # give the window a size
+window.config(bg="#dae6f6") # give the window a backgroud color
+window.resizable(False, False) # we don't want to change the size of the window while the program is running
 
-heading = tk.Label(master=window, text="Spelling Checker", font=("arial 30 bold"), bg="#dea6f6", fg="#364971")
+heading = tk.Label(master=window, text="Spelling Checker", font=("arial 30 bold"), bg="#dea6f6", fg="#364971") # window heading
 heading.pack(pady=10)
 
-entry = tk.Entry(master=window, justify="center", width=30, font=("popins 25"),bg="white")
+entry = tk.Entry(master=window, justify="center", width=30, font=("popins 25"),bg="white") # the entry
 entry.pack()
-entry.focus()
+entry.focus() #make the cursor bip
 
 def correct_spelling():
 

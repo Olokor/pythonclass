@@ -1,45 +1,25 @@
-# import turtle
-# from turtle import *
+questions = {
+    "1. what is noun": "A",
+    "2. who is doctor": "C",
+    "3. what is computer": "C",
+    "4. what is the name of the library in python that is used for drawing":"B",
+    "5. what is the function of the random library in python": "A"
+}
 
-# speed(1)
-# bgcolor('blue')
-# penup()
-# goto(-150, -100)
-# fillcolor('yellow')
-# begin_fill()
+options = [
+    ["A. a noun is a name of anything", 
+    "B. a noun is an action word",
+    "C. a noun is a word that shows relationship"],
+    ["A. a doctor is food",
+    "B. a doctor is person that does codding",
+    "C. a doctor is a person that treats sick people"],
+    ["A. a computer is a magical divice",
+    "B. a computer is a medical device",
+    "C. A computer is a smart dummy"],
+    ["A. tkinter", "B. turtle", "C. random"],
+    ["A. picks items at random from a list of different items", 
+    "B. for doing math calaclations",
+    "C. for doing websearch"]
+]
 
-
-# for number_of_repeat in range(3):
-#     forward(300)
-#     left(120)
-
-# end_fill()
-
-# # hideturtle()
-# turtle.mainloop()
-
-import turtle
-
-# Create a Turtle instance
-my_turtle = turtle.Turtle()
-
-# Draw a rhombus
-side_length = 100  # Length of each side of the rhombus
-
-# Move turtle to starting position
-my_turtle.penup()
-my_turtle.goto(-side_length / 2, 0)  # Start at the left side of the rhombus
-my_turtle.pendown()
-
-# Draw the rhombus
-for _ in range(2):  # Repeat the following instructions twice to draw two sides of the rhombus
-    my_turtle.forward(side_length)
-    my_turtle.left(60)
-    my_turtle.forward(side_length)
-    my_turtle.left(120)
-
-# Hide the turtle
-my_turtle.hideturtle()
-
-# Keep the window open
-turtle.done()
+print(questions.get("1. what is noun"))

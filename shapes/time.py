@@ -10,8 +10,9 @@ label.pack()
 def time():
     global label
     string = strftime("%H:%M:%S: %p")
-    label.config(text=string)
+    label.configure(text=string)
     label.after(1000, time)
+    # label.configure()
 
 time()
 mainloop()

@@ -1,13 +1,22 @@
-# from googletrans import Translator
-# import googletrans
+from tkinter import *
 
-# language = googletrans.LANGUAGES
-# # print(language)
-# display = list(language.values())
-# print(display)
 
-# from time import strftime
+window =  Tk()
 
-# print(strftime("%H:%M:%S:%p"))
+entry_output = StringVar()
+entry = Entry(window, textvariable=entry_output)
+entry_str = ""
+entry.pack(padx=20, pady=20)
 
-print(10%3)
+def show(letter):
+    global entry_str
+    entry_str += str(letter)
+    entry_output.set(entry_str)
+
+
+
+Button(window, text="A", command=lambda:show("A")).pack()
+
+Button(window, text="B", command=lambda:show("B")).pack()
+
+window.mainloop()
